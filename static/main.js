@@ -15,6 +15,7 @@ function listing() {
         let title = articles[i]["title"];
         let content = articles[i]["content"];
         let file = articles[i]["file"];
+        let time = articles[i]["time"] || "????.??.??";
         let profile = articles[i]["profile"];
 
         let temp_html = `
@@ -35,7 +36,7 @@ function listing() {
               <p class="card-text">
                 ${content}
               </p>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
             </div>
           </div>
         </div>
